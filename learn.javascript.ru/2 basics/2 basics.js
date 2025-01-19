@@ -135,17 +135,39 @@
 //   result = prompt("Enter a number over 100", "");
 // } while (result <= 100 && result);
 
-let n = +prompt("Enter a number", "73")
-let result = '';
+// let n = +prompt("Enter a number", "73")
+// let result = '';
 
-outer: for(let i = 2; i <= n; i++) {
-  for(let j = 2; j <= i / 2; j++) {
-    if (i % j === 0) continue outer;
-  }
-  result += i + ' ';
-}
+// outer: for(let i = 2; i <= n; i++) {
+//   for(let j = 2; j <= i / 2; j++) {
+//     if (i % j === 0) continue outer;
+//   }
+//   result += i + ' ';
+// }
 
-alert(result)
+// alert(result)
 
-// если число делится с остатком
-// и при этом не равно себе, то пропускаем
+// if (browser === 'Edge') {
+//   alert( "You've got the Edge!" );
+// } else if (['Chrome', 'Firefox', 'Safari', 'Opera'].includes(browser)) {
+//   alert( 'Okay we support these browsers too' );
+// } else {
+//   alert( 'We hope that this page looks ok!' );
+// }
+
+// const number = +prompt('Введите число между 0 и 3', '');
+
+// switch (number) {
+//   case 0:
+//     alert('Вы ввели число 0');
+//     break;
+
+//   case 1:
+//     alert('Вы ввели число 1');
+//     break;
+
+//   case 2:
+//   case 3:
+//     alert('Вы ввели число 2, а может и 3');
+//     break;
+// }
