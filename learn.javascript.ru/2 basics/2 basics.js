@@ -171,3 +171,29 @@
 //     alert('Вы ввели число 2, а может и 3');
 //     break;
 // }
+
+// function checkAge(age) {
+//   return (age > 18) ? true: confirm('Родители разрешили?');
+// }
+
+// function checkAge(age) {
+//   return (age > 18) || confirm('Родители разрешили?');
+// }
+
+// function min(a, b) {
+//   return (a < b) ? a : b;
+// }
+
+function pow(x, n) {
+  if (n >= 1 && n % 1 == 0) {
+    return x ** n
+  } else {
+    // bad idea to return a string
+    return `Степень ${n} не поддерживается, используйте натуральное число`
+  }
+}
+
+let x = prompt("X:"),
+    n = prompt("N:")
+
+alert( pow(x, n) )
