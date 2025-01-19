@@ -202,13 +202,17 @@
 //   alert('hello, world')
 // };
 
-function ask(question, yes, no) {
-  if (confirm(question)) yes()
-  else no();
-}
+// function ask(question, yes, no) {
+//   if (confirm(question)) yes()
+//   else no();
+// }
 
-ask(
-  "Вы согласны?",
-  () => { alert("Вы согласились."); },
-  () => { alert("Вы отменили выполнение."); }
-);
+// ask(
+//   "Вы согласны?",
+//   () => { alert("Вы согласились."); },
+//   () => { alert("Вы отменили выполнение."); }
+// );
+
+
+// alert( "" == false )
+// alert( "" !== false )
