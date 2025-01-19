@@ -127,8 +127,25 @@
 //   alert( `number ${i}!` );
 //   i++
 // }
-let result;
 
-do {
-  result = prompt("Enter a number over 100", "");
-} while (result) <= 100 && result);
+
+// let result;
+
+// do {
+//   result = prompt("Enter a number over 100", "");
+// } while (result <= 100 && result);
+
+let n = +prompt("Enter a number", "73")
+let result = '';
+
+outer: for(let i = 2; i <= n; i++) {
+  for(let j = 2; j <= i / 2; j++) {
+    if (i % j === 0) continue outer;
+  }
+  result += i + ' ';
+}
+
+alert(result)
+
+// если число делится с остатком
+// и при этом не равно себе, то пропускаем
