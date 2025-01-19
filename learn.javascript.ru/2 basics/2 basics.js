@@ -184,16 +184,20 @@
 //   return (a < b) ? a : b;
 // }
 
-function pow(x, n) {
-  if (n >= 1 && n % 1 == 0) {
-    return x ** n
-  } else {
-    // bad idea to return a string
-    return `Степень ${n} не поддерживается, используйте натуральное число`
-  }
-}
+// function pow(x, n) {
+//   if (n >= 1 && n % 1 == 0) {
+//     return x ** n
+//   } else {
+//     // bad idea to return a string
+//     return `Степень ${n} не поддерживается, используйте натуральное число`
+//   }
+// }
 
-let x = prompt("X:"),
-    n = prompt("N:")
+// let x = prompt("X:"),
+//     n = prompt("N:")
 
-alert( pow(x, n) )
+// alert( pow(x, n) )
+
+let sayHi = function() {
+  alert('hello, world')
+};
