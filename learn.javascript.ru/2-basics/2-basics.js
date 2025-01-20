@@ -214,5 +214,5 @@
 // );
 
 
-// alert( "" == false )
-// alert( "" !== false )
+alert( "" == false )
+alert( "" !== false )
