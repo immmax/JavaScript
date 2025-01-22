@@ -30,4 +30,12 @@
 
 * !!! Documentation viewer - https://devdocs.io/git/
 
+* Периодически заглядывать - https://developer.chrome.com/docs/devtools?hl=ru
+
+* https://www.w3schools.com/js/
+
+* vs code extension - coderunner (для запуска js кода и вывода в консоль)
+
+*  Фленеган «JavaScript — подробное руководство»
+
 *
