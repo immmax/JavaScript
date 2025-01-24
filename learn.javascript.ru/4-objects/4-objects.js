@@ -62,20 +62,57 @@
 
 // ЗАДАНИЕ - Умножаем все числовые свойства на 2
 
-function multiplyNumeric(obj) {
-  for (let prop in obj) {
-    if (typeof (obj[prop]) === "number") {
-      obj[prop] *= 2
-    }
+// function multiplyNumeric(obj) {
+//   for (let prop in obj) {
+//     if (typeof (obj[prop]) === "number") {
+//       obj[prop] *= 2
+//     }
+//   }
+// }
+
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: "My menu",
+// };
+
+// console.log(menu);
+// multiplyNumeric(menu);
+// console.log(menu);
+
+// РАЗДЕЛ 4.4
+// ЗАДАНИЕ - Создайте калькулятор
+
+// let calculator = {
+//   read() {
+//     this.a = +prompt("a?", ""),
+//     this.b = +prompt("b?", "")
+//   },
+
+//   sum() {
+//     return this.a + this.b;
+//   },
+
+//   mul() {
+//     return this.a * this.b;
+//   }
+// }
+
+// calculator.read();
+// alert( calculator.sum() );
+// alert( calculator.mul() );
+
+// ЗАДАНИЕ - Цепь вызовов
+
+let ladder = {
+  step: 0,
+  up() {
+    return this.step++;
+  },
+  down() {
+    return this.step--;
+  },
+  showStep: function() { // показывает текущую ступеньку
+    alert( this.step );
   }
-}
-
-let menu = {
-  width: 200,
-  height: 300,
-  title: "My menu",
 };
-
-console.log(menu);
-multiplyNumeric(menu);
-console.log(menu);
