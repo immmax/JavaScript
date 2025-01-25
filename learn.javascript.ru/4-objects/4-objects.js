@@ -104,15 +104,43 @@
 
 // ЗАДАНИЕ - Цепь вызовов
 
-let ladder = {
-  step: 0,
-  up() {
-    return this.step++;
+// let ladder = {
+//   step: 0,
+//   up() {
+//     return this.step++;
+//   },
+//   down() {
+//     return this.step--;
+//   },
+//   showStep: function() { // показывает текущую ступеньку
+//     alert( this.step );
+//   }
+// };
+
+// РАЗДЕЛ 4.5
+// Задача - Калькулятор
+
+function Calculator() {
+  this.read = function() {
+    this.a = +prompt("a?", ""),
+    this.b = +prompt("b?", "")
   },
-  down() {
-    return this.step--;
+
+  this.sum = function() {
+    return this.a + this.b;
   },
-  showStep: function() { // показывает текущую ступеньку
-    alert( this.step );
+
+  this.mul = function() {
+    return this.a * this.b;
   }
-};
+}
+
+// Задача - Аккумулятор
+
+function Accumulator(startingValue) {
+  this.value = startingValue
+
+  this.read = function() {
+    this.value += +prompt("New Number?", "")
+  }
+}
