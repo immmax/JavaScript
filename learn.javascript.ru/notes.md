@@ -38,4 +38,6 @@
 
 *  Фленеган «JavaScript — подробное руководство»
 
+* https://docs.artifactsmmo.com/
+
 *
