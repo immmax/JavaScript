@@ -40,4 +40,10 @@
 
 * https://docs.artifactsmmo.com/
 
+* Библиотека Math - https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math
+
+*  https://evanw.github.io/float-toy - вот хороший сайт если нужно понять float репрезентацию
+
+*  jupyter notebook
+
 *
