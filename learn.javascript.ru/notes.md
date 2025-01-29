@@ -46,4 +46,12 @@
 
 *  jupyter notebook
 
-*
+* бесплатный хостинг - https://neocities.org/
+
+* бесплатный хостинг - https://nekoweb.org/
+
+* https://yay.boo/
+
+* https://codeberg.org/
+
+* oracle cloud hosting
