@@ -55,3 +55,5 @@
 * https://codeberg.org/
 
 * oracle cloud hosting
+
+* много туториалов по вебу - https://code.mu/
