@@ -2,7 +2,7 @@
 
 // РАЗДЕЛ 5 - Типы данных
 
-// 5.2 - Числа
+// 5.2 - ЧИСЛА
 
 // Задача - Сумма пользовательских чисел
 // let a = +prompt("a?", '')
@@ -84,3 +84,32 @@
 // }
 
 // console.log(stat)
+
+
+// 5.3 - СТРОКИ
+
+// Задача - Сделать первый символ заглавным
+function ucFirst(str) {
+  if (str == '') return ''
+  return str[0].toUpperCase() + str.slice(1)
+}
+
+// Задача - Проверка на спам
+function checkSpam(str) {
+  str.toLowerCase().includes('viagra') ||
+  str.toLowerCase().includes('xxx')
+}
+
+// Задача - Усечение строки
+function truncate(str, maxlength) {
+  if (str.length > maxlength) {
+    return str.substr(0, maxlength-1) + '…'
+  }
+
+  return str
+}
+
+// Задача - Выделить число
+function extractCurrencyValue(str) {
+  return +str.slice(1)
+}
