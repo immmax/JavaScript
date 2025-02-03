@@ -113,3 +113,78 @@ function truncate(str, maxlength) {
 function extractCurrencyValue(str) {
   return +str.slice(1)
 }
+
+
+// 5.4 - МАССИВЫ
+
+// Задача - Операции с массивами
+let styles = ["Джаз", "Блюз"];
+console.log( styles );
+
+styles.push("Рок-н-ролл");
+console.log( styles );
+
+let middleIndex = Math.floor(styles.length / 2);
+styles[middleIndex] = "Классика";
+console.log( styles );
+
+styles.shift();
+console.log( styles );
+
+styles.unshift("Рэп", "Регги");
+console.log( styles );
+
+
+// Задача - Сумма введённых чисел
+function sumInput() {
+  let arr = []
+
+  while (true) {
+    let newValue = prompt("Введите ЧИСЛО:")
+
+    // return alert(newValue)
+
+    if (!isFinite(newValue) || newValue == '' || newValue == null) {
+      break
+    }
+
+    arr.push(+newValue)
+  }
+  let result = 0
+
+  for (let item of arr) {
+    result += item;
+  }
+
+  return alert( result )
+}
+
+// sumInput()
+
+// Задача - Подмассив наибольшей суммы
+function getMaxSubSum(arr) {
+  let maxSum = 0
+
+  let currentSum = 0
+
+  for (let item of arr) {
+    function getMaxSubSum(arr) {
+    let maxSum = 0
+
+    let currentSum = 0
+
+    for (let item of arr) {
+      currentSum += item
+
+      if (currentSum < 0) {
+        currentSum = 0
+      }
+
+      if ( currentSum > maxSum ) {
+        maxSum = currentSum
+      }
+    }
+  }
+    return maxSum
+  }
+}
