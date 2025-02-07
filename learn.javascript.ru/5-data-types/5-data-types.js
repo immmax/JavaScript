@@ -407,3 +407,41 @@ usersMapped = [
 // console.log(usersById);
 
 // console.log(Object.groupBy(users, ({id}) => id));
+
+
+// 5.7 - Map и Set
+
+// Задача - Фильтрация уникальных элементов массива
+function unique(arr) {
+  return Array.from(new Set(arr));
+}
+
+
+// Задача - Отфильтруйте анаграмы
+// let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+// function aclean(arr) {
+//   let unique = new Map();
+//   arr.forEach((item) => {
+//     unique.set(Array.from(item.toLowerCase()).sort().join(""), item);
+//   });
+
+//   return Array.from(unique.values())
+
+//   // console.log(Array.from(unique.values()));
+// }
+
+// aclean(arr);
+
+
+// Задача - Перебираемые ключи
+let map = new Map();
+
+map.set("name", "John");
+
+let keys = Array.from(map.keys());
+// OR
+// let keys = [...map.keys()];
+console.log(keys)
+keys.push("more");
+console.log(keys);
