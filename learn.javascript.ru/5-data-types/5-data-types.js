@@ -435,13 +435,40 @@ function unique(arr) {
 
 
 // Задача - Перебираемые ключи
-let map = new Map();
+// let map = new Map();
 
-map.set("name", "John");
+// map.set("name", "John");
 
-let keys = Array.from(map.keys());
-// OR
-// let keys = [...map.keys()];
-console.log(keys)
-keys.push("more");
-console.log(keys);
+// let keys = Array.from(map.keys());
+// // OR
+// // let keys = [...map.keys()];
+// console.log(keys)
+// keys.push("more");
+// console.log(keys);
+
+
+
+// РАЗДЕЛ 5.9 - Object.keys, values, entries
+
+// Задача - Сумма свойств объекта
+// let salaries = {
+//   "John": 100,
+//   "Pete": 300,
+//   "Mary": 250,
+// };
+
+// function sumSalaries(salaries) {
+//   let result = 0;
+//   for (let value of Object.values(salaries)) {
+//     result += value;
+//   }
+//   return result;
+// }
+
+// console.log( sumSalaries(salaries) ); // 650
+
+
+// Задача - Подсчёт количества свойств объекта
+// function count(obj) {
+//   return Object.keys(obj).length;
+// }
