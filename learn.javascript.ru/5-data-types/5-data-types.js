@@ -518,3 +518,99 @@ function unique(arr) {
 
 // topSalary(salaries);
 
+
+// РАЗДЕЛ 5.11 Дата и время
+// console.log("РАЗДЕЛ 5.11 Дата и время");
+// console.log(new Intl.DateTimeFormat('ru', { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric'}).format(new Date))
+
+// Задача - Создание
+// console.log( new Date(2012, 1, 20, 3, 12))
+
+
+// Задача - Покажите день недели
+// function getWeekDay(date) {
+//   let daysOfTheWeek = ["ВС", "ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ"];
+//   return daysOfTheWeek[date.getDay()];
+// }
+
+// let date = new Date(2012, 0, 3);
+
+// console.log(getWeekDay(date));
+
+
+// Задача - День недели в европейской нумерации
+// function getLocalDay(date) {
+//   let daysOfTheWeek = [7, 1, 2, 3, 4, 5, 6];
+//   return daysOfTheWeek[date.getDay()];
+// }
+
+// let date = new Date(2012, 0, 3);
+
+// console.log(getLocalDay(date));
+
+
+// Задача - Какой день месяца был много дней назад?
+// function getDateAgo(date, days) {
+//   return new Date(date - days * 1000 * 3600 * 24).getDate();
+// }
+
+
+// Задача - Последнее число месяца?
+// function getLastDayOfMonth(year, month) {
+//   return new Date(year, month + 1, 0).getDate();
+// }
+
+
+// Задача - Сколько сегодня прошло секунд?
+// function getSecondsToday() {
+//   let today = new Date().setHours(0, 0, 0, 0)
+
+//   // return Math.round((Date.now() - today) / 1000);
+//   // OR
+//   // return (Date.now() - today) / 1000 >> 0;
+// }
+
+// console.log(getSecondsToday())
+
+
+// Задача - Сколько секунд осталось до завтра?
+// function getSecondsToTomorrow() {
+//   let tomorrow = new Date().setHours(25, 0, 0, 0);
+
+//   return Math.floor((tomorrow - Date.now()) / 1000);
+// }
+
+// console.log(getSecondsToTomorrow())
+
+// Задача - Форматирование относительной даты
+// function formatDate(date) {
+//   let timePeriod = {
+//     second: 1,
+//     minute: 60,
+//     hour: 3600,
+//   }
+
+//   let timeDifference = (Date.now() - date) / 1000 //
+
+//   if (timeDifference < timePeriod.second) {
+//     return "прямо сейчас";
+//   } else if (timeDifference < timePeriod.minute) {
+//     return `${timeDifference} сек. назад`;
+//   } else if (timeDifference < timePeriod.hour) {
+//     return `${timeDifference / 60} мин. назад`;
+//   } else {
+//     // "DD.MM.YY HH:mm"
+//     let formattedDate = {
+//       date: date.getDate() < 10 ? "0" + date.getDate() : date.getDate(),
+//       month: date.getMonth() < 5 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1,
+//       year: date.getFullYear() % 100,
+//       hour: date.getHours() < 10 ? "0" + date.getHours() : date.getHours(),
+//       minutes: date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes(),
+//     };
+
+//     return `${formattedDate.date}.${formattedDate.month}.${formattedDate.year} ${formattedDate.hour}:${formattedDate.minutes}`;
+//   }
+// }
+
+// console.log(formatDate(new Date(new Date() - 1000 * 60 * 60 )));
+
