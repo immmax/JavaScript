@@ -614,3 +614,47 @@ function unique(arr) {
 
 // console.log(formatDate(new Date(new Date() - 1000 * 60 * 60 )));
 
+
+
+// Раздел 5.12 - Формат JSON, метод toJSON
+
+// Задача - Преобразуйте объект в JSON, а затем обратно в обычный объект
+// let user = {
+//   name: "Василий Иванович",
+//   age: 35,
+// };
+
+// const jsonUser = JSON.stringify(user)
+// console.log(jsonUser);
+// const recoveredUser = JSON.parse(jsonUser)
+// console.log(recoveredUser);
+
+
+// Задача - Исключить обратные ссылки
+let room = {
+  number: 23,
+};
+
+let meetup = {
+  title: "Совещание",
+  occupiedBy: [{ name: "Иванов" }, { name: "Петров" }],
+  place: room,
+};
+
+// цикличные ссылки
+room.occupiedBy = meetup;
+meetup.self = meetup;
+
+console.log(
+  JSON.stringify(meetup, function replacer(key, value) {
+    // console.log(`KEY - ${key}: ${value}`);
+    return (key != "" &&  value == meetup) ? undefined : value;
+  })
+);
+/* в результате должно быть:
+{
+  "title":"Совещание",
+  "occupiedBy":[{"name":"Иванов"},{"name":"Петров"}],
+  "place":{"number":23}
+}
+*/
