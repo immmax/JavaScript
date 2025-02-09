@@ -472,3 +472,49 @@ function unique(arr) {
 // function count(obj) {
 //   return Object.keys(obj).length;
 // }
+
+
+// РАЗДЕЛ 5.10 - Деструктурирующее присваивание
+
+// Задача - Деструктурирующее присваивание
+
+// let user = { name: "John", years: 30 };
+
+// // ваш код должен быть с левой стороны:
+// let {name, years: age, isAdmin = false} = user
+
+// console.log(name); // John
+// console.log(age); // 30
+// console.log(isAdmin); // false
+
+
+// Задача - Максимальная зарплата
+// function isObjectEmpty(obj) {
+//   return Object.keys(obj).length === 0;
+// }
+
+// let salaries = {
+//   John: 100,
+//   Pete: 300,
+//   Mary: 250,
+// };
+
+// function topSalary(salaries) {
+//   if (isObjectEmpty(salaries)) return null;
+
+//   let bestEmployee = 'Unknown';
+//   let maxSalary = 0;
+
+//   for (let [employee, salary] of Object.entries(salaries)) {
+//     if (salary >= maxSalary) {
+//       bestEmployee = employee;
+//       maxSalary = salary;
+//       console.log(`${bestEmployee}: ${maxSalary}`);
+//     }
+//   }
+
+//   return bestEmployee
+// }
+
+// topSalary(salaries);
+
