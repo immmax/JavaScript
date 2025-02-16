@@ -85,11 +85,68 @@ let list = {
 
 
 // Задача - Вывод односвязного списка в обратном порядке
-function printListBackward(list) {
-  if (list.next) {
-    printListBackward(list.next);
-  }
-  console.log( list.value )
+// function printListBackward(list) {
+//   if (list.next) {
+//     printListBackward(list.next);
+//   }
+//   console.log( list.value )
+// }
+
+// console.log(printListBackward(list));
+
+
+// Раздел 6.3 - Область видимости переменных, замыкание
+
+// Задача - Сумма с помощью замыканий
+function sum(a) {
+  return function(b) {
+    a + b;
+  };
 }
 
-console.log(printListBackward(list));
+// Задача - Фильтрация с помощью функции
+function inBetween(a, b) {
+ return item => arr.slice(a, b).includes(item)
+}
+
+function inArray(arr) {
+  return item => arr.includes(item)
+}
+
+
+// Задача - Сортировать по полю
+function byField(str) {
+  return (a, b) => a[str] > b[str] ? 1 : -1
+}
+
+
+// Задача - Армия функций
+function makeArmy() {
+  let shooters = [];
+
+  let i = 0;
+  while (i < 10) {
+    let k = i
+    let shooter = function() { // функция shooter
+      console.log( k );
+      return k; // должна выводить порядковый номер
+    };
+    shooters.push(shooter); // и добавлять стрелка в массив
+    i++;
+  }
+
+  // ...а в конце вернуть массив из всех стрелков
+  return shooters;
+}
+
+let army = makeArmy();
+
+// все стрелки выводят 10 вместо их порядковых номеров (0, 1, 2, 3...)
+army[0](); // 10 от стрелка с порядковым номером 0
+army[1](); // 10 от стрелка с порядковым номером 1
+army[2](); // 10 ...и т.д.
+army[3](); // 10 ...и т.д.
+army[4](); // 10 ...и т.д.
+army[5](); // 10 ...и т.д.
+army[6](); // 10 ...и т.д.
+army[7](); // 10 ...и т.д.
