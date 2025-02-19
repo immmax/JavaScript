@@ -191,3 +191,39 @@ function byField(str) {
 // console.log(sum(5)(-1)(2) == 6)
 // console.log(sum(6)(-1)(-2)(-3) == 0)
 // console.log(sum(0)(1)(2)(3)(4)(5) == 15)
+
+
+// Раздел 6.8 - Объект функции, NFE
+
+// Задача - Вывод каждую секунду
+// function printNumbers(from, to) {
+//   let counter = from
+
+//   let timerId = setInterval(() => {
+//     console.log(counter);
+//     if (counter == to) {
+//       clearInterval(timerId);
+//     }
+//     counter++;
+//   }, 1000);
+// }
+
+
+function printNumbers(from, to) {
+  let counter = from;
+
+  let timerId = setTimeout(function next() {
+    console.log(counter);
+    if (counter < to) {
+      setTimeout(next, 1000);
+    }
+    counter++;
+  }, 1000);
+
+}
+
+printNumbers(3, 8)
+console.log("В.С.Ё.");
+
+
+// Задача - Что покажет setTimeout?
